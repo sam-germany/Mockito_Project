@@ -3,20 +3,26 @@ package com.example.demo.model;
 
 import lombok.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserEntity {
 
-    @NonNull
+    @NotNull
     private String userName;
 
-    @NonNull
+    @NotNull
     private String userCity;
 
-    @NonNull
+    @NotNull
     private int userMob;
+
+    @NotNull
+    private UserAddress userAddress;
 
 
 }

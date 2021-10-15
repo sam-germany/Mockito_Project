@@ -19,11 +19,11 @@ public class UserController {
 
 
     @PostMapping
-    public ResponseEntity<UserEntity> createUser(@RequestBody @Valid UserEntity userEntity){
+    public ResponseEntity<UserEntity> createUser1(@RequestBody @Valid UserEntity userEntity){
 
-        UserEntity userEntity22 = userService.createUser(userEntity);
+        UserEntity userEntity22 = userService.createUser2(userEntity);
 
-        return  ResponseEntity.status(HttpStatus.OK).body(userEntity22);
+        return  ResponseEntity.status(HttpStatus.CREATED).body(userEntity22);
     }
 
 
